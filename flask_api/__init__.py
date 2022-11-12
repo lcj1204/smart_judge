@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 
 from flask_api import banana_vgg
 
@@ -33,7 +33,7 @@ def ai_smart_factory():
 
     response = json.dumps(result, ensure_ascii=False, indent="\t")
 
-    return response
+    return response, 200
 
 
 # if __name__ == "__main__":
